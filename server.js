@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
     res.redirect("/about");
 });
 
-// setup a route to my about path
+// setup a route to the about path
 app.get("/about", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/about.html"));
 });
