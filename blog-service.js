@@ -17,7 +17,7 @@ module.exports.initialize = function(){
     })
 }
 
-module.exports.getAllPosts() = function(){
+module.exports.getAllPosts = function(){
     return new Promise((resolve,reject)=>{
         if(posts.length == 0){
             reject("File is empty, no posts returned");
@@ -27,7 +27,7 @@ module.exports.getAllPosts() = function(){
     })
 }
 
-module.exports.getPublishedPosts() = function(){
+module.exports.getPublishedPosts = function(){
     return new Promise((resolve,reject)=>{
         var filteredPosted = [];
         for(let i = 0; i < posts.length; i++){
@@ -43,12 +43,12 @@ module.exports.getPublishedPosts() = function(){
     })
 }
 
-module.exports.getCategories() = function(){
+module.exports.getCategories = function(){
     return new Promise((resolve,reject)=>{
         if(categories.length == 0){
             reject("File is empty, no categories returned");
         }else{
-            resolve(posts);
+            resolve(categories);
         }
     })
 }
